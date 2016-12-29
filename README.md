@@ -97,30 +97,30 @@ It's the nomenclature I used while implementing the Explorer classes.
 
 
 
-- dependency: <importerType> <::/> <planetIdentifier>
-- planetIdentifier: <authorName> </> <planetName>
+- dependency: &lt;importerType> &lt;::/> &lt;planetIdentifier>
+- planetIdentifier: &lt;authorName> &lt;/> &lt;planetName>
 - authorName: string, not colon, no slash
 - planetName: string, not colon, no slash
-- planetSnapshotIdentifier: <planetIdentifier> (<:> <version>)?
-- version: <versionNumber> (<(> <versionComment> <)>)?
+- planetSnapshotIdentifier: &lt;planetIdentifier> (&lt;:> &lt;version>)?
+- version: &lt;versionNumber> (&lt;(> &lt;versionComment> &lt;)>)?
 
 
-- universe: directory containing <planet>s.
-    There are two types of <universe>:
+- universe: directory containing &lt;planet>s.
+    There are two types of &lt;universe>:
     - abstract universe (aka universe or author universe): this is like a standalone library, where each planet is a package.
             No collision occurs between planets.
-            An <author> can create multiple <abstract universe>s, and must give an unique name to each of them.
-            Often, for a given author there is only one <abstract universe> which is named after the <author>'s name.
+            An &lt;author> can create multiple &lt;abstract universe>s, and must give an unique name to each of them.
+            Often, for a given author there is only one &lt;abstract universe> which is named after the &lt;author>'s name.
             
     - working universe: a directory containing all the planets for a given project.
-            The working universe can host planets from different <abstract universe>s.
+            The working universe can host planets from different &lt;abstract universe>s.
             It's often a "planets" directory (or "class-planets" directory) inside your application.
             Collisions can occur (although it generally doesn't).
-            Note: there are always autoloaders workaround for cases where the application requires multiple <planet>s from different <universe>s (abstract) with the same name 
-            Note: only the <planetName>s are used in a <working universe> (i.e. the <abstract universe>s' names are ignored).
+            Note: there are always autoloaders workaround for cases where the application requires multiple &lt;planet>s from different &lt;universe>s (abstract) with the same name 
+            Note: only the &lt;planetName>s are used in a &lt;working universe> (i.e. the &lt;abstract universe>s' names are ignored).
             
-- planet: a php package, the <planetName> is the name of the directory
-- author: the human person behind an <abstract universe>
+- planet: a php package, the &lt;planetName> is the name of the directory
+- author: the human person behind an &lt;abstract universe>
 
 
 
@@ -145,9 +145,9 @@ But the Explorer only cares about one information: the "dependencies" key.
 
 
 - dependencies:
-    - this key is an array containing the <dependency> (defined in the Maculus nomenclature).
-            Actually, it contains a <planetSnapshotIdentifier> but this implementation of Explorer
-            only cares about the <dependency> part (<dependency> is a substring of the <planetSnapshotIdentifier>)
+    - this key is an array containing the &lt;dependency> (defined in the Maculus nomenclature).
+            Actually, it contains a &lt;planetSnapshotIdentifier> but this implementation of Explorer
+            only cares about the &lt;dependency> part (&lt;dependency> is a substring of the &lt;planetSnapshotIdentifier>)
     
    
 
