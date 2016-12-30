@@ -32,46 +32,69 @@
  *      explorer install lingtalfi/Bat
  *
  *
- * Command line syntax
- * ------------------------
- *
- * explorer install <planetIdentifier|dependency> <targetDirectory>? <installOptions>?
- *      - this command imports and installs the planet and its dependencies
- *          inside the <targetDirectory>/planets directory if found, or inside the
- *          <targetDirectory>/class-planets directory otherwise (it's created if it doesn't exist)
- *      - planetIdentifier: the git <importerType> will be assumed. To choose the <importerType>, use the <dependency> instead
- *      - targetDirectory: if omitted, the current directory will be used
- *      - installOptions:
- *          - -i: force the re-install (overwrite the planet dir in the target directory)
- *          - -f: force the re-import (fetch from the web and overwrite the planet dir in the <warp> directory)
- *          - -q: quiet mode (no explanations)
- *
- * explorer import <planetIdentifier> <importOptions>?
- *      - imports the planet to the <warp> directory, which location you can define in this script,
- *          and defaults to a "warp" directory next to this script.
- *          Basically, the <warp> directory is a cache directory to avoid fetching planets from the web.
- *      - importOptions:
- *          - -f: force the re-import (fetch from the web and overwrite the planet dir in the <warp> directory)
- *          - -q: quiet mode (no explanations)
- *
- *
- *
- *
- *
- * Nomenclature
- * -----------------
- * - dependency: <importerType> <::/> <planetIdentifier>
- * - planetIdentifier: <authorName> </> <planetName>
- * - authorName: string, not colon, no slash
- * - planetName: string, not colon, no slash
- * - planetSnapshotIdentifier: <planetIdentifier> (<:> <version>)?
- * - version: <versionNumber> (<(> <versionComment> <)>)?
- *
- *
- *
- *
- *
  */
+
+
+define('DOC', "
+
+Explorer Help
+=====================
+2016-12-29
+
+
+Examples:
+--------------
+explorer install lingtalfi/Bat              
+explorer install lingtalfi/Bat -f                      
+explorer install lingtalfi/Bat -f -i                      
+explorer install lingtalfi/Bat -d                      
+explorer install lingtalfi/Bat /path/to/my/app             
+explorer install lingtalfi/Bat /path/to/my/app -f             
+explorer install lingtalfi/Bat /path/to/my/app -fi             
+explorer import lingtalfi/Bat -f              
+explorer import lingtalfi/Bat -f              
+explorer import lingtalfi/Bat -f -d   
+
+
+
+Command Line Syntax
+-------------------
+explorer install <planetIdentifier|dependency> <targetDirectory>? <installOptions>?
+     - this command imports and installs the planet and its dependencies
+         inside the <targetDirectory>/planets directory if found, or inside the
+         <targetDirectory>/class-planets directory otherwise (it's created if it doesn't exist)
+     - planetIdentifier: the git <importerType> will be assumed. To choose the <importerType>, use the <dependency> instead
+     - targetDirectory: if omitted, the current directory will be used
+     - installOptions:
+         - -i: force the re-install (overwrite the planet dir in the target directory)
+         - -f: force the re-import (fetch from the web and overwrite the planet dir in the <warp> directory)
+         - -q: quiet mode (no explanations)
+         - -d: debug mode: shows the exceptions in your face rather than catching them
+
+explorer import <planetIdentifier> <importOptions>?
+     - imports the planet to the <warp> directory, which location you can define in this script,
+         and defaults to a \"warp\" directory next to this script.
+         Basically, the <warp> directory is a cache directory to avoid fetching planets from the web.
+     - importOptions:
+         - -f: force the re-import (fetch from the web and overwrite the planet dir in the <warp> directory)
+         - -q: quiet mode (no explanations)
+         - -d: debug mode: shows the exceptions in your face rather than catching them
+
+
+
+
+
+Nomenclature
+-----------------
+- dependency: <importerType> <::/> <planetIdentifier>
+- planetIdentifier: <authorName> </> <planetName>
+- authorName: string, not colon, no slash
+- planetName: string, not colon, no slash
+- planetSnapshotIdentifier: <planetIdentifier> (<:> <version>)?
+- version: <versionNumber> (<(> <versionComment> <)>)?
+          
+");
+
 //------------------------------------------------------------------------------/
 // CONFIG
 //------------------------------------------------------------------------------/
@@ -215,45 +238,17 @@ function helpKey($m)
 
 function help()
 {
-    $planetIdentifierOrDependency = helpKey('planetIdentifier|dependency');
-    $planetIdentifier = helpKey('planetIdentifier');
-    $targetDirectory = helpKey('targetDirectory');
-    $installOptions = helpKey('installOptions');
-    $importOptions = helpKey('importOptions');
-    $importerType = helpKey('importerType');
-    $dependency = helpKey('dependency');
-    $warp = helpKey('warp');
+//    $planetIdentifierOrDependency = helpKey('planetIdentifier|dependency');
+//    $planetIdentifier = helpKey('planetIdentifier');
+//    $targetDirectory = helpKey('targetDirectory');
+//    $installOptions = helpKey('installOptions');
+//    $importOptions = helpKey('importOptions');
+//    $importerType = helpKey('importerType');
+//    $dependency = helpKey('dependency');
+//    $warp = helpKey('warp');
 
 
-    echo "
-Usage: 
-- explorer install $planetIdentifierOrDependency| $targetDirectory? $installOptions?
-     - this command imports and installs the planet and its dependencies
-         inside the $targetDirectory/planets directory if found, or inside the
-         $targetDirectory/class-planets directory otherwise (it's created if it doesn't exist)
-     - planetIdentifier: the git $importerType will be assumed. To choose the $importerType, use the $dependency instead         
-     - targetDirectory: if omitted, the current directory will be used
-     - installOptions:
-         - -i: force the re-install (overwrite the planet dir in the target directory)
-         - -f: force the re-import (fetch from the web and overwrite the planet dir in the $warp directory)
-- explorer import $planetIdentifier $importOptions?
-     - imports the planet to the $warp directory, which location you can define in this script,
-         and defaults to a \"warp\" directory next to this script.
-         Basically, the $warp directory is a cache directory to avoid fetching planets from the web.
-     - importOptions:
-         - -f: force the re-import (fetch from the web and overwrite the planet dir in the $warp directory)
-              
-              
-Examples: 
-explorer install lingtalfi/Bat              
-explorer install lingtalfi/Bat -f                      
-explorer install lingtalfi/Bat -f -i                      
-explorer install lingtalfi/Bat /path/to/my/app             
-explorer install lingtalfi/Bat /path/to/my/app -f             
-explorer install lingtalfi/Bat /path/to/my/app -fi             
-explorer import lingtalfi/Bat -f              
-explorer import lingtalfi/Bat -f              
-";
+    echo DOC;
     exit;
 }
 
@@ -278,6 +273,17 @@ $args = $argv;
 array_shift($args);
 
 
+function onLog($msg, $level, $hasQ)
+{
+    if (false === $hasQ) {
+        if ('error' === $level) {
+            echo "\033[31m" . $msg . "\033[0m" . PHP_EOL;
+        } else {
+            echo $msg . PHP_EOL;
+        }
+    }
+}
+
 $command = array_shift($args);
 if ('install' == $command) {
     $planetIdentifier = array_shift($args);
@@ -294,6 +300,7 @@ if ('install' == $command) {
     $hasF = hasOption('f', $args);
     $hasI = hasOption('i', $args);
     $hasQ = hasOption('q', $args);
+    $hasD = hasOption('d', $args);
 
     // do we use the default git importer type?
     $p = explode('::/', $planetIdentifier);
@@ -310,11 +317,10 @@ if ('install' == $command) {
         }
     }
     $explorer = NeoMaculusExplorer::create()
-        ->setLogger(new ExplorerScriptLog(function ($msg) use ($hasQ) {
-            if (false === $hasQ) {
-                echo $msg . PHP_EOL;
-            }
+        ->setLogger(new ExplorerScriptLog(function ($msg, $level) use ($hasQ) {
+            call_user_func('onLog', $msg, $level, $hasQ);
         }))
+        ->setDebug($hasD)
         ->setWarpZone($warpDir);
     $explorer->install($planetIdentifier, $workingUniverseDir, $hasF, $hasI);
 
@@ -325,6 +331,7 @@ if ('install' == $command) {
 
     $hasF = hasOption('f', $args);
     $hasQ = hasOption('q', $args);
+    $hasD = hasOption('d', $args);
 
     // do we use the default git importer type?
     $p = explode('::/', $planetIdentifier);
@@ -333,16 +340,19 @@ if ('install' == $command) {
     }
 
     $explorer = NeoMaculusExplorer::create()
-        ->setLogger(new ExplorerScriptLog(function ($msg) use ($hasQ) {
-            if (false === $hasQ) {
-                echo $msg . PHP_EOL;
-            }
+        ->setLogger(new ExplorerScriptLog(function ($msg, $level) use ($hasQ) {
+            call_user_func('onLog', $msg, $level, $hasQ);
         }))
+        ->setDebug($hasD)
         ->setWarpZone($warpDir);
     $explorer->import($planetIdentifier, $hasF);
 
 
 } else {
-    fatalError("Unknown command: $command");
+    if ("" === trim($command)) {
+        help();
+    } else {
+        fatalError("Unknown command: $command");
+    }
 }
 

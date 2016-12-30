@@ -16,24 +16,29 @@ class GithubImporter implements ImporterInterface
         }
 
         $p = explode('/', $planetIdentifier, 2);
-        $author = $p[0];
-        $planet = $p[1];
+        if (2 === count($p)) {
 
-        // http://stackoverflow.com/questions/9504791/is-there-anyway-to-programmatically-fetch-a-zipball-of-private-github-repo
-        // curl -L https://api.github.com/repos/lingtalfi/bashmanager/zipball > bashmanager.zip
+            $author = $p[0];
+            $planet = $p[1];
 
-        $url = 'https://api.github.com/repos/' . $author . '/' . $planet . '/zipball/master';
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Universe Explorer'); // required by the github api
-        $data = curl_exec($ch);
-        curl_close($ch);
+            // http://stackoverflow.com/questions/9504791/is-there-anyway-to-programmatically-fetch-a-zipball-of-private-github-repo
+            // curl -L https://api.github.com/repos/lingtalfi/bashmanager/zipball > bashmanager.zip
 
-        $tmpDir = FileSystemTool::tempDir();
-        $tmpFile = $tmpDir . "/tmp.zip";
-        file_put_contents($tmpFile, $data);
-        return ZipTool::unzip($tmpFile, $dstDir);
+            $url = 'https://api.github.com/repos/' . $author . '/' . $planet . '/zipball/master';
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_USERAGENT, 'Universe Explorer'); // required by the github api
+            $data = curl_exec($ch);
+            curl_close($ch);
+
+            $tmpDir = FileSystemTool::tempDir();
+            $tmpFile = $tmpDir . "/tmp.zip";
+            file_put_contents($tmpFile, $data);
+            return ZipTool::unzip($tmpFile, $dstDir);
+        } else {
+            throw new \Exception("Invalid planetIdentifier: $planetIdentifier");
+        }
     }
 }

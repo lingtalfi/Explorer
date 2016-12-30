@@ -29,6 +29,7 @@ class MaculusExplorer
 
     private $importers;
     private $warpZone;
+    private $debug;
     /**
      * @var ExplorerLogInterface
      */
@@ -38,6 +39,7 @@ class MaculusExplorer
     {
         $this->importers = [];
         $this->warpZone = null;
+        $this->debug = false;
     }
 
     public function setWarpZone($warpZone)
@@ -52,6 +54,12 @@ class MaculusExplorer
         return $this;
     }
 
+    public function setDebug($debug)
+    {
+        $this->debug = $debug;
+        return $this;
+    }
+
     public function addImporter($type, ImporterInterface $importer)
     {
         $this->importers[$type] = $importer;
@@ -60,20 +68,29 @@ class MaculusExplorer
 
     public function install($dependency, $workingUniverseDir, $forceImport = false, $forceInstall = false)
     {
-        $this->log("Installing $dependency in $workingUniverseDir with forceImport=" . (int)$forceImport . " and forceInstall=" . (int)$forceInstall);
-        $this->log("--------------");
-        $this->import($dependency, $forceImport, function ($dependency, $planetIdentifier, $planetWarpDir) use ($workingUniverseDir, $forceInstall) {
-            FileSystemTool::mkdir($workingUniverseDir, 0777, true);
-            $p = explode('/', $planetIdentifier);
-            $planetName = $p[1];
-            $targetPlanetDir = $workingUniverseDir . '/' . $planetName;
-            if (file_exists($targetPlanetDir) && false === $forceInstall) {
-                $this->log("- Install $dependency (it already exists in the application, nothing was done)");
-                return;
+        try {
+            $this->log("Installing $dependency in $workingUniverseDir with forceImport=" . (int)$forceImport . " and forceInstall=" . (int)$forceInstall);
+            $this->log("--------------");
+            $this->import($dependency, $forceImport, function ($dependency, $planetIdentifier, $planetWarpDir) use ($workingUniverseDir, $forceInstall) {
+                FileSystemTool::mkdir($workingUniverseDir, 0777, true);
+                $p = explode('/', $planetIdentifier);
+                $planetName = $p[1];
+                $targetPlanetDir = $workingUniverseDir . '/' . $planetName;
+                if (file_exists($targetPlanetDir) && false === $forceInstall) {
+                    $this->log("- Install $dependency (it already exists in the application, nothing was done)");
+                    return;
+                }
+                $this->log("- Install $dependency (copying files from warp and overwriting)");
+                FileSystemTool::copyDir($planetWarpDir, $targetPlanetDir);
+            });
+        } catch (\Exception $e) {
+            if (false === $this->debug) {
+                $this->log("An error occurred with message: " . $e->getMessage(), "error");
+                $this->log("To see the full trace, use the debug option", "error");
+            } else {
+                throw $e;
             }
-            $this->log("- Install $dependency (copying files from warp and overwriting)");
-            FileSystemTool::copyDir($planetWarpDir, $targetPlanetDir);
-        });
+        }
     }
 
     public function import($dependency, $force = false, $func = null)
@@ -140,10 +157,10 @@ class MaculusExplorer
         return ExplorerUtil::getDirectDependencies($planetWarpDir);
     }
 
-    private function log($msg)
+    private function log($msg, $level = null)
     {
         if (null !== $this->logger) {
-            $this->logger->log($msg);
+            $this->logger->log($msg, $level);
         }
     }
 }
