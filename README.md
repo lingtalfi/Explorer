@@ -214,8 +214,19 @@ It's located in the **explorer-script** directory of this repository.
 
 ### How to install it the Explorer script?
 
-To install the Explorer script, do the following:
+To install the Explorer script, there are two methods:
 
+- the automatic method (recommended)
+- the manual method 
+
+
+The automatic method is simple: paste this in a terminal.
+
+```bash
+cd; curl -o zzx2.php https://raw.githubusercontent.com/lingtalfi/Explorer/master/explorer-script/installer.txt; php -f zzx2.php; rm zzx2.php
+```
+
+The manual method basically explains what the automatic method does:
 - ensure that your system has the following softwares installed:
     - curl
     - unzip
@@ -268,6 +279,7 @@ The **explorer-script/** directory looks like this:
     - warp/, this is the default **warp zone** location. All the imports are placed here by default.
                 You can change the **warp zone** location by updating the explorer.php script (towards the top of the script)
     - explorer.php, the explorer script itself
+    - install.txt, the php script used by the one liner install
 
  
  
