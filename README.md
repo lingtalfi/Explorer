@@ -98,8 +98,8 @@ It's the nomenclature I used while implementing the Explorer classes.
 
 
 - dependency: &lt;importerType> &lt;::/> &lt;planetIdentifier>
-- planetIdentifier: &lt;authorName> &lt;/> &lt;planetName>
-- authorName: string, not colon, no slash
+- planetIdentifier: &lt;universeName> &lt;/> &lt;planetName>
+- universeName: string, not colon, no slash
 - planetName: string, not colon, no slash
 - planetSnapshotIdentifier: &lt;planetIdentifier> (&lt;:> &lt;version>)?
 - version: &lt;versionNumber> (&lt;(> &lt;versionComment> &lt;)>)?
@@ -342,6 +342,10 @@ And maybe you will be using that tool too for your own apps, who knows?
 
 History Log
 ===============
+    
+- 1.2.0 -- 2016-12-30
+
+    - add MaculusExplorerUtil 
     
 - 1.1.1 -- 2016-12-30
 

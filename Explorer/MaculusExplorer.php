@@ -15,8 +15,8 @@ use Explorer\Util\ExplorerUtil;
  *
  *
  * - dependency: <importerType> <::/> <planetIdentifier>
- * - planetIdentifier: <authorName> </> <planetName>
- * - authorName: string, not colon, no slash
+ * - planetIdentifier: <universeName> </> <planetName>
+ * - universeName: string, not colon, no slash
  * - planetName: string, not colon, no slash
  * - planetSnapshotIdentifier: <planetIdentifier> (<:> <version>)?
  * - version: <versionNumber> (<(> <versionComment> <)>)?
