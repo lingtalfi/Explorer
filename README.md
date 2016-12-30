@@ -343,6 +343,10 @@ And maybe you will be using that tool too for your own apps, who knows?
 History Log
 ===============
     
+- 1.1.1 -- 2016-12-30
+
+    - add more checkings to MaculusExplorer 
+    
 - 1.1.0 -- 2016-12-29
 
     - add debug option to Explorer

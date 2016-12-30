@@ -105,7 +105,11 @@ class MaculusExplorer
 
     private function extract($dependency)
     {
-        return explode('::/', $dependency);
+        $p = explode('::/', $dependency, 2);
+        if (2 !== count($p)) {
+            throw new \Exception("Invalid dependency syntax");
+        }
+        return $p;
     }
 
     private function _import($dependency, $force = false, array &$importedDependencies, \Closure $func = null)
