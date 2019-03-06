@@ -4,9 +4,9 @@
 namespace BabyYaml\Reader\Monitor\Traits;
 
 
-use BabyYaml\Helper\VarTool;
-use BabyYaml\Reader\Monitor\ClassicMonitor;
-use BabyYaml\Reader\Monitor\VoidMonitor;
+use Ling\BabyYaml\Helper\VarTool;
+use Ling\BabyYaml\Reader\Monitor\ClassicMonitor;
+use Ling\BabyYaml\Reader\Monitor\VoidMonitor;
 
 
 /**

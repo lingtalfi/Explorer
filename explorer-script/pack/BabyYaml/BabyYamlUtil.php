@@ -4,7 +4,7 @@
 namespace BabyYaml;
 
 
-use BabyYaml\Reader\BabyYamlReader;
+use Ling\BabyYaml\Reader\BabyYamlReader;
 
 class BabyYamlUtil
 {

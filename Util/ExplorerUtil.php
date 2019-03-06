@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Explorer\Util;
+namespace Ling\Explorer\Util;
 
 
-use BabyYaml\BabyYamlUtil;
+use Ling\BabyYaml\BabyYamlUtil;
 
 class ExplorerUtil
 {

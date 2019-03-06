@@ -1,7 +1,7 @@
 <?php
 
 namespace BabyYaml\Helper\InlineVariableUtil\Adaptor;
-use BabyYaml\Helper\ReflectionTool;
+use Ling\BabyYaml\Helper\ReflectionTool;
 
 
 /**

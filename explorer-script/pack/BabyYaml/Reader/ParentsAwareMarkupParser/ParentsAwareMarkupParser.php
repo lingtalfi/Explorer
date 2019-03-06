@@ -3,7 +3,7 @@
 
 namespace BabyYaml\Reader\ParentsAwareMarkupParser;
 
-use BabyYaml\Reader\ParentsAwareMarkupParser\ParentsAwareMarkupParser\Adaptor\ParentsAwareMarkupParserAdaptorInterface;
+use Ling\BabyYaml\Reader\ParentsAwareMarkupParser\ParentsAwareMarkupParser\Adaptor\ParentsAwareMarkupParserAdaptorInterface;
 
 
 /**

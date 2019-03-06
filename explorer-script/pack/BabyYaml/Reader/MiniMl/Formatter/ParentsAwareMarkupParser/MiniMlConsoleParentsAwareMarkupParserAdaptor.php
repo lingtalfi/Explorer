@@ -2,7 +2,7 @@
 
 
 namespace BabyYaml\Reader\MiniMl\Formatter\ParentsAwareMarkupParser;
-use BabyYaml\Reader\ParentsAwareMarkupParser\ParentsAwareMarkupParser\Adaptor\ConsoleParentsAwareMarkupParserAdaptor;
+use Ling\BabyYaml\Reader\ParentsAwareMarkupParser\ParentsAwareMarkupParser\Adaptor\ConsoleParentsAwareMarkupParserAdaptor;
 
 
 /**

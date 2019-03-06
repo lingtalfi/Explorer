@@ -2,7 +2,7 @@
 
 
 namespace BabyYaml\Helper\InlineVariableUtil\Adaptor;
-use BabyYaml\Helper\ArrayTool;
+use Ling\BabyYaml\Helper\ArrayTool;
 
 
 /**

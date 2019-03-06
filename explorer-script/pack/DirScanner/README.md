@@ -24,7 +24,7 @@ that might be easier to use for the simplest cases.
 ```php
 <?php
 
-use DirScanner\DirScanner;
+use Ling\DirScanner\DirScanner;
 
 require_once "bigbang.php";
 
@@ -80,8 +80,8 @@ More examples
 <?php
 
 
-use Bat\FileSystemTool;
-use DirScanner\DirScanner;
+use Ling\Bat\FileSystemTool;
+use Ling\DirScanner\DirScanner;
 
 require_once "bigbang.php";
 
@@ -101,7 +101,7 @@ a(DirScanner::create()->scanDir($dir, function($path, $rPath, $level){
 <?php
 
 
-use DirScanner\YorgDirScannerTool;
+use Ling\DirScanner\YorgDirScannerTool;
 
 require_once "bigbang.php"; // start the local universe
 

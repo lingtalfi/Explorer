@@ -175,7 +175,7 @@ This behaviour allows us to write compact and flexible code:
 <?php
 
 
-use Bat\FileSystemTool;
+use Ling\Bat\FileSystemTool;
 
 require_once 'bigbang.php';
 
@@ -241,7 +241,7 @@ Returns false if the file couldn't be created.
 <?php
 
 
-use Bat\FileSystemTool;
+use Ling\Bat\FileSystemTool;
 
 require_once "bigbang.php";
 

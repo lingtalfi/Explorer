@@ -2,7 +2,7 @@
 
 
 namespace BabyYaml\Reader\ValueInterpreter;
-use BabyYaml\Helper\StringTool;
+use Ling\BabyYaml\Helper\StringTool;
 
 
 /**

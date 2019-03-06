@@ -3,7 +3,7 @@
 
 namespace DirScanner;
 
-use Bat\FileSystemTool;
+use Ling\Bat\FileSystemTool;
 
 
 /**

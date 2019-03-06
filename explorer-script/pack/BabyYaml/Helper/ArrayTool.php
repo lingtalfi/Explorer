@@ -2,7 +2,7 @@
 
 
 namespace BabyYaml\Helper;
-use BabyYaml\Helper\ArrayExportUtil\ArrayExportUtil;
+use Ling\BabyYaml\Helper\ArrayExportUtil\ArrayExportUtil;
 
 
 /**

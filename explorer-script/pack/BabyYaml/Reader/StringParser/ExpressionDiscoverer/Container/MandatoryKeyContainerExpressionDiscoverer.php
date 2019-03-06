@@ -4,9 +4,9 @@
 namespace BabyYaml\Reader\StringParser\ExpressionDiscoverer\Container;
 
 
-use BabyYaml\Helper\VarTool;
-use BabyYaml\Reader\StringIterator\StringIteratorInterface;
-use BabyYaml\Reader\StringParser\Validator\ContainerValidator;
+use Ling\BabyYaml\Helper\VarTool;
+use Ling\BabyYaml\Reader\StringIterator\StringIteratorInterface;
+use Ling\BabyYaml\Reader\StringParser\Validator\ContainerValidator;
 
 
 /**

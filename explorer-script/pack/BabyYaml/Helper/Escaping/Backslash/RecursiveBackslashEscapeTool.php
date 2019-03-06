@@ -3,7 +3,7 @@
 
 
 namespace BabyYaml\Helper\Escaping\Backslash;
-use BabyYaml\Helper\Escaping\RecursiveEscapeTool;
+use Ling\BabyYaml\Helper\Escaping\RecursiveEscapeTool;
 
 
 /**

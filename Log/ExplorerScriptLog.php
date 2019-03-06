@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Explorer\Log;
+namespace Ling\Explorer\Log;
 
 
 class ExplorerScriptLog implements ExplorerLogInterface

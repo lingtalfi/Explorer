@@ -3,10 +3,10 @@
 
 namespace BabyYaml\Reader\MiniMl\Tool;
 
-use BabyYaml\Reader\MiniMl\Formatter\ConsoleMiniMlFormatter;
-use BabyYaml\Reader\MiniMl\Formatter\HtmlMiniMlFormatter;
-use BabyYaml\Reader\MiniMl\Formatter\StripMiniMlFormatter;
-use BabyYaml\Reader\MiniMl\Util\MiniMlFormatterUtil;
+use Ling\BabyYaml\Reader\MiniMl\Formatter\ConsoleMiniMlFormatter;
+use Ling\BabyYaml\Reader\MiniMl\Formatter\HtmlMiniMlFormatter;
+use Ling\BabyYaml\Reader\MiniMl\Formatter\StripMiniMlFormatter;
+use Ling\BabyYaml\Reader\MiniMl\Util\MiniMlFormatterUtil;
 
 
 /**

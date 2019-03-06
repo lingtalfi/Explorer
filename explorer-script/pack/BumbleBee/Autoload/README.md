@@ -19,7 +19,7 @@ This should be done once at the beginning of your application's life (in a file 
 
 ```php
 
-use BumbleBee\Autoload\ButineurAutoloader;
+use Ling\BumbleBee\Autoload\ButineurAutoloader;
 
 // a good place for those lines would be the init script of your application
 require_once __DIR__ . '/classes/BeeAutoloader.php';

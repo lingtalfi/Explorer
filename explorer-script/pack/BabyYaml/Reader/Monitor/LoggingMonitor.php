@@ -3,7 +3,7 @@
 
 namespace BabyYaml\Reader\Monitor;
 
-use BabyYaml\Reader\Monitor\Listener\MonitorListenerInterface;
+use Ling\BabyYaml\Reader\Monitor\Listener\MonitorListenerInterface;
 
 
 

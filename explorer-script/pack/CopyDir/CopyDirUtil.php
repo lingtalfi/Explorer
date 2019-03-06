@@ -5,7 +5,7 @@ namespace CopyDir;
 /*
  * LingTalfi 2015-10-19
  */
-use CopyDir\Exception\CopyDirException;
+use Ling\CopyDir\Exception\CopyDirException;
 
 class CopyDirUtil
 {

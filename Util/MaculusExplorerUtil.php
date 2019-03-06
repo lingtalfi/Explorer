@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Explorer\Util;
+namespace Ling\Explorer\Util;
 
 
 class MaculusExplorerUtil

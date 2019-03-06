@@ -2,7 +2,7 @@
 
 
 namespace BabyYaml\Reader\StringParser\ExpressionDiscoverer;
-use BabyYaml\Helper\Escaping\EscapeTool;
+use Ling\BabyYaml\Helper\Escaping\EscapeTool;
 
 
 /**

@@ -3,7 +3,7 @@
 
 
 namespace BabyYaml\Reader\ValueInterpreter;
-use BabyYaml\Reader\StringParser\BabyYamlLineExpressionDiscoverer;
+use Ling\BabyYaml\Reader\StringParser\BabyYamlLineExpressionDiscoverer;
 
 
 /**

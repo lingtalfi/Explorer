@@ -39,7 +39,7 @@ Exact nomenclature is defined in
 <?php
 
 
-use Bat\CaseTool;
+use Ling\Bat\CaseTool;
 
 require_once "bigbang.php";
 
@@ -95,7 +95,7 @@ Exact nomenclature is defined in
 <?php
 
 
-use Bat\CaseTool;
+use Ling\Bat\CaseTool;
 
 require_once "bigbang.php";
 
@@ -153,7 +153,7 @@ Snake case is defined in
 <?php
 
 
-use Bat\CaseTool;
+use Ling\Bat\CaseTool;
 
 require_once "bigbang.php";
 
@@ -181,7 +181,7 @@ Return the [dog version](https://github.com/lingtalfi/ConventionGuy/blob/master/
 <?php
 
 
-use Bat\CaseTool;
+use Ling\Bat\CaseTool;
 
 require_once "bigbang.php";
 
@@ -207,7 +207,7 @@ This case comes handy to ensure safe name for uploaded files.
 ```php
 <?php
 
-use Bat\CaseTool;
+use Ling\Bat\CaseTool;
 
 require_once "bigbang.php";
 
@@ -235,7 +235,7 @@ Return the [snake version](https://github.com/lingtalfi/ConventionGuy/blob/maste
 <?php
 
 
-use Bat\CaseTool;
+use Ling\Bat\CaseTool;
 
 require_once "bigbang.php";
 

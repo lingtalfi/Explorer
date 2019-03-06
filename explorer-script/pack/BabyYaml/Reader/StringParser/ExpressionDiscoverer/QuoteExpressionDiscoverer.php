@@ -1,7 +1,7 @@
 <?php
 
 namespace BabyYaml\Reader\StringParser\ExpressionDiscoverer;
-use BabyYaml\Helper\QuoteTool;
+use Ling\BabyYaml\Helper\QuoteTool;
 
 
 /**

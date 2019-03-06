@@ -35,7 +35,7 @@ If not, returns the missing keys.
 <?php
 
 
-use Bat\ArrayTool;
+use Ling\Bat\ArrayTool;
 
 require_once "bigbang.php";
 

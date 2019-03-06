@@ -2,7 +2,7 @@
 
 
 namespace BabyYaml\Reader\StringParser\ExpressionDiscovererModel;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\ExpressionDiscovererInterface;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\ExpressionDiscovererInterface;
 
 
 /**

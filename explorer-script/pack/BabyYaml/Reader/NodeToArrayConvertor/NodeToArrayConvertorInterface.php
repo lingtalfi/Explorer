@@ -2,8 +2,8 @@
 
 
 namespace BabyYaml\Reader\NodeToArrayConvertor;
-use BabyYaml\Reader\Node\NodeInterface;
-use BabyYaml\Reader\ValueInterpreter\ValueInterpreterInterface;
+use Ling\BabyYaml\Reader\Node\NodeInterface;
+use Ling\BabyYaml\Reader\ValueInterpreter\ValueInterpreterInterface;
 
 
 /**

@@ -34,7 +34,7 @@ Example
 <?php
 
 
-use DirScanner\YorgDirScannerTool;
+use Ling\DirScanner\YorgDirScannerTool;
 
 require_once "bigbang.php";
 

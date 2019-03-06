@@ -3,8 +3,8 @@
 namespace BabyYaml\Reader\StringParser\ExpressionDiscoverer;
 
 
-use BabyYaml\Helper\StringTool;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\Exception\HybridCommentException;
+use Ling\BabyYaml\Helper\StringTool;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\Exception\HybridCommentException;
 
 
 /**

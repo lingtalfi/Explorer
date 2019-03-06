@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Explorer\Explorer;
+namespace Ling\Explorer\Explorer;
 
 
-use Bat\FileSystemTool;
-use Explorer\Importer\ImporterInterface;
-use Explorer\Log\ExplorerLogInterface;
-use Explorer\Util\ExplorerUtil;
+use Ling\Bat\FileSystemTool;
+use Ling\Explorer\Importer\ImporterInterface;
+use Ling\Explorer\Log\ExplorerLogInterface;
+use Ling\Explorer\Util\ExplorerUtil;
 
 /**
  *

@@ -5,8 +5,8 @@ namespace Bat;
 /*
  * LingTalfi 2015-10-07
  */
-use CopyDir\AuthorCopyDirUtil;
-use DirScanner\DirScanner;
+use Ling\CopyDir\AuthorCopyDirUtil;
+use Ling\DirScanner\DirScanner;
 
 class FileSystemTool
 {

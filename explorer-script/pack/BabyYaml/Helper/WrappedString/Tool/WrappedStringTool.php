@@ -1,7 +1,7 @@
 <?php
 
 namespace BabyYaml\Helper\WrappedString\Tool;
-use BabyYaml\Helper\Escaping\EscapeTool;
+use Ling\BabyYaml\Helper\Escaping\EscapeTool;
 
 
 /**

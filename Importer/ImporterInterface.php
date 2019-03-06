@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Explorer\Importer;
+namespace Ling\Explorer\Importer;
 
 
 interface ImporterInterface

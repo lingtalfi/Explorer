@@ -2,12 +2,12 @@
 
 
 namespace BabyYaml\Reader\StringParser;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\Container\MappingContainerExpressionDiscoverer;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\Container\SequenceContainerExpressionDiscoverer;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\HybridExpressionDiscoverer;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\Miscellaneous\PolyExpressionDiscoverer;
-use BabyYaml\Reader\StringParser\ExpressionDiscoverer\SimpleQuoteExpressionDiscoverer;
-use BabyYaml\Reader\StringParser\ExpressionDiscovererModel\ExpressionDiscovererModel;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\Container\MappingContainerExpressionDiscoverer;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\Container\SequenceContainerExpressionDiscoverer;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\HybridExpressionDiscoverer;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\Miscellaneous\PolyExpressionDiscoverer;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscoverer\SimpleQuoteExpressionDiscoverer;
+use Ling\BabyYaml\Reader\StringParser\ExpressionDiscovererModel\ExpressionDiscovererModel;
 
 
 /**

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Explorer\Explorer;
+namespace Ling\Explorer\Explorer;
 
 
-use Explorer\Importer\GithubImporter;
+use Ling\Explorer\Importer\GithubImporter;
 
 class NeoMaculusExplorer extends MaculusExplorer
 {

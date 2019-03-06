@@ -98,10 +98,10 @@ Nomenclature
 //------------------------------------------------------------------------------/
 // CONFIG
 //------------------------------------------------------------------------------/
-use Bat\FileSystemTool;
-use BumbleBee\Autoload\ButineurAutoloader;
-use Explorer\Explorer\NeoMaculusExplorer;
-use Explorer\Log\ExplorerScriptLog;
+use Ling\Bat\FileSystemTool;
+use Ling\BumbleBee\Autoload\ButineurAutoloader;
+use Ling\Explorer\Explorer\NeoMaculusExplorer;
+use Ling\Explorer\Log\ExplorerScriptLog;
 
 $warpDir = __DIR__ . "/warp";
 

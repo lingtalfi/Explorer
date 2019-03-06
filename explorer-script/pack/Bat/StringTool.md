@@ -135,7 +135,7 @@ Example of use:
 <?php
 
 
-use Bat\StringTool;
+use Ling\Bat\StringTool;
 
 require_once "bigbang.php";
 
@@ -175,7 +175,7 @@ str    replacePortion ( str:string, int:start, int:length, str:replacement )
 <?php
 
 
-use Bat\StringTool;
+use Ling\Bat\StringTool;
 
 require_once "bigbang.php";
 
@@ -207,7 +207,7 @@ array    split ( str:string )
 <?php
 
 
-use Bat\StringTool;
+use Ling\Bat\StringTool;
 
 require_once "bigbang.php";
 
@@ -246,7 +246,7 @@ The following script uses the [portable autoloader](https://github.com/lingtalfi
 ```php
 <?php
 
-use Bat\StringTool;
+use Ling\Bat\StringTool;
 
 require_once "bigbang.php";
 

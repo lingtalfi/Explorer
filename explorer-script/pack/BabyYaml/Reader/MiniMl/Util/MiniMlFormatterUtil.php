@@ -11,7 +11,7 @@
 
 namespace BabyYaml\Reader\MiniMl\Util;
 
-use BabyYaml\Reader\MiniMl\Formatter\MiniMlFormatterInterface;
+use Ling\BabyYaml\Reader\MiniMl\Formatter\MiniMlFormatterInterface;
 
 
 /**

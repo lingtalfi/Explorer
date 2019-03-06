@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Explorer\Importer;
+namespace Ling\Explorer\Importer;
 
 
-use Bat\FileSystemTool;
-use Bat\ZipTool;
+use Ling\Bat\FileSystemTool;
+use Ling\Bat\ZipTool;
 
 class GithubImporter implements ImporterInterface
 {
